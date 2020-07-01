@@ -1,0 +1,112 @@
+body {
+  padding: 30px;
+  line-height: 2.8;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.menu-item {
+  position: relative;
+  margin-right: 15px;
+  outline: 2px solid green;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 20px;
+
+  text-decoration: none;
+  background-color: rgb(169, 196, 169);
+  color: #fff;
+}
+
+.submenu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: none;
+}
+
+.submenu-item {
+  position: relative;
+  margin: 5px 0;
+  outline: 2px solid darkgrey;
+}
+
+.submenu-link {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background-color: #ccc;
+  color: #212121;
+}
+
+.menu-item:hover .menu-link {
+  background-color: rgb(160, 202, 160);
+  color: darkolivegreen;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu-item:hover .submenu-link {
+  background-color: rgb(148, 147, 147);
+  color: #fff;
+}
+
+.sub-submenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: none;
+}
+
+.sub-submenu-item {
+  margin: 0 5px 5px 5px;
+  outline: 2px solid rgb(190, 74, 74);
+}
+
+.sub-submenu-link {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background-color: pink;
+  color: #212121;
+}
+
+.sub-submenu-item:hover .sub-submenu-link {
+  background-color: rgb(211, 148, 158);
+  color: #fff;
+}
+
+.submenu-item:hover .sub-submenu {
+  display: block;
+}

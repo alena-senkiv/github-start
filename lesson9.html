@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/lesson9.css" />
+    <title>Lesson 9</title>
+  </head>
+
+  <body>
+    <header>
+      <ul class="main">
+        <li><a href="./">НА ГЛАВНУЮ</a></li>
+      </ul>
+    </header>
+    <article class="product">
+      <div class="product-thumb">
+        <img src="./img/flowers.jpg" alt="Цветы" width="370" />
+        <div class="product-actions">
+          <button class="item" aria-label="В избранное">
+            <svg class="icon">
+              <use href="./img/sprite.svg#likes"></use>
+            </svg>
+          </button>
+          <button class="item" aria-label="Написать отзыв">
+            <svg class="icon">
+              <use href="./img/sprite.svg#reviews"></use>
+            </svg>
+          </button>
+          <button class="item" aria-label="В закладки">
+            <svg class="icon">
+              <use href="./img/sprite.svg#favorites"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="product-meta">
+        <h2 class="product-name">Полевые цветы</h2>
+        <p class="product-price">Цена договорная</p>
+      </div>
+    </article>
+  </body>
+</html>

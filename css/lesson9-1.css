@@ -1,0 +1,21 @@
+body {
+  line-height: 2.8;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 80px;
+  padding: 30px;
+  background-color: rgb(231, 231, 83, 0.8);
+  border-bottom: 1px solid red;
+  text-align: center;
+}

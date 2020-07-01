@@ -1,0 +1,31 @@
+body {
+  color: #212121;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  /* padding: 50px; */
+}
+
+.main a {
+  display: inline-block;
+  color: green;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.main {
+  list-style-type: "\1F449";
+  padding-left: 0;
+}
+
+.main > li:first-child {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: red;
+}
+
+img {
+  display: block;
+}
