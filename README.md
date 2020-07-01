@@ -1,2 +1,2 @@
-# github-tutorial
+# vebinars
 Description for repository 
