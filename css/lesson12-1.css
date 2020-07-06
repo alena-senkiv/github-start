@@ -1,0 +1,103 @@
+body {
+  padding: 30px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.menu-item {
+  position: relative;
+  margin-right: 15px;
+  outline: 2px solid green;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 20px;
+
+  text-decoration: none;
+  background-color: rgb(169, 196, 169);
+  color: #fff;
+}
+
+.form {
+  width: 600px;
+  outline: 1px solid green;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* если не через флекс родителю */
+/* .form-input{
+  width: 100%;
+} */
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+}
+
+.comment + .form-label {
+  top: 0;
+  transform: translateY(10px);
+}
+
+.form-input {
+  margin: 0;
+  padding: 10px 30px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(-50%, -50%);
+
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.form-field:focus-within .icon {
+  --color7: red;
+}
+
+.form-field:focus-within .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translate(-20px, -35px);
+  color: red;
+  font-size: 12px;
+}
+
+.comment.form-input:focus-within .form-label,
+.comment.form-input:not(:placeholder-shown) + .form-label {
+  transform: translate(-20px, -15px);
+}

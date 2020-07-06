@@ -1,0 +1,261 @@
+body {
+  padding: 30px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.menu-item {
+  margin-right: 15px;
+  outline: 2px solid green;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 20px;
+
+  text-decoration: none;
+  background-color: rgb(169, 196, 169);
+  color: #fff;
+}
+
+.form {
+  position: relative;
+  width: 600px;
+  outline: 1px solid green;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+}
+
+.form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%) scale(1);
+  transition: transform 500ms linear, color 500ms linear;
+}
+
+.form-input {
+  width: 100%;
+  margin: 0;
+  padding: 10px 40px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font: inherit;
+
+  transition: border-color 500ms linear;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(-50%, -50%);
+
+  width: 18px;
+  height: 18px;
+  --color7: currentColor;
+
+  transition: color 500ms linear;
+}
+
+.form-field:focus-within .form-icon,
+.form-field:focus-within .icon {
+  color: red;
+  --color7: currentColor;
+}
+
+.form-field:focus-within .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  transform: translate(-20px, -35px) scale(0.86);
+  color: red;
+}
+
+.form-field:focus-within .form-input {
+  border-color: red;
+  outline: none;
+}
+
+/* кастомный чекбокс через псевдоэлемент*/
+.psevdo {
+  display: flex;
+  align-items: center;
+}
+
+.psevdo .checkbox {
+  /* position: absolute;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+}
+
+.psevdo .checkbox-label {
+  /* display: inline-flex; */
+}
+
+.psevdo .checkbox-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 5px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition: background 500ms linear, border 500ms linear;
+}
+
+.psevdo .checkbox:checked + .checkbox-label::before {
+  background: url('../img/check.svg') no-repeat center #2196f3;
+
+  border: 2px solid #2196f3;
+  border-radius: 2px;
+}
+
+/* кастомный чекбокс через инлайн свг */
+
+.inline .checkbox {
+  /* position: absolute;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background: white;
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition: background 1000ms cubic-bezier(0.4, 0, 0.2, 1), border 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inline .checkbox:checked + .checkbox-icon {
+  background: red;
+  /* border: none; */
+  border: transparent;
+}
+
+/* кастомный чекбокс через css-bg */
+.css-bg .checkbox {
+  /* position: absolute;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+}
+
+.checkbox-label {
+  display: inline-block;
+}
+
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: background 1000ms cubic-bezier(0.4, 0, 0.2, 1), border 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.css-bg .checkbox:checked + .check-icon {
+  background: url(../img/check.svg) green no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+  border: 2px solid green;
+  border-radius: 2px;
+}
+
+/* с анимацией чекбокса и текста лейбл */
+
+.label-text {
+  display: inline-block;
+  transition: color 1000ms linear, transform 1000ms linear;
+}
+
+.checkbox:checked ~ .label-text {
+  color: green;
+  transform: translateX(20px);
+}
+
+.animation .check-icon {
+  transition: transform 1000ms linear;
+}
+
+.animation .checkbox:checked + .check-icon {
+  transform: scale(1.5);
+}
+
+/* вместо appearance: none; потому что это свойство пока неработает во всех браузерах */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+button[type='submit'] {
+  margin-top: 20px;
+}
+
+.close-form {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 50%;
+
+  transition: transform 1000ms linear, border 1000ms linear, background-color 1000ms linear, color 1000ms linear;
+}
+
+.icon-close {
+  width: 11px;
+  height: 11px;
+  --color6: currentColor;
+}
+
+.close-form:hover {
+  border: 1px solid red;
+  color: white;
+  background-color: red;
+  transform: scale(1.5);
+}

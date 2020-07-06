@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/lesson12-1.css" />
+    <title>Стилизация форм - современное решение</title>
+  </head>
+
+  <body>
+    <header>
+      <ul class="main">
+        <li><a href="./">НА ГЛАВНУЮ</a></li>
+      </ul>
+    </header>
+    <div class="container">
+      <form class="form js-speaker-form" autocomplete="off">
+        <div class="form-field">
+          <input class="form-input" type="text" name="name" id="name" placeholder=" " autofocus data-placeholder="Иван Иванович" />
+          <label class="form-label" for="name">Имя</label>
+          <svg class="icon">
+            <use href="./img/sprite.svg#user-name"></use>
+          </svg>
+        </div>
+
+        <div class="form-field">
+          <input class="form-input" type="tel" name="tel" id="tel" placeholder=" " autocomplete="on" />
+          <label class="form-label" for="tel">Телефон</label>
+          <svg class="icon">
+            <use href="./img/sprite.svg#user-tel"></use>
+          </svg>
+        </div>
+
+        <div class="form-field">
+          <input class="form-input" type="email" name="mail" id="mail" placeholder=" " autocomplete="email" />
+          <label class="form-label" for="mail">Почта</label>
+          <svg class="icon">
+            <use href="./img/sprite.svg#user-mail"></use>
+          </svg>
+        </div>
+
+        <div class="form-field">
+          <textarea class="comment form-input" name="comment" id="comment" cols="40" rows="10" placeholder=" "></textarea>
+          <label class="form-label" for="comment">Оставьте комментарий</label>
+        </div>
+
+        <div>
+          <input type="checkbox" name="policy" id="policy" />
+          <label for="policy">Соглашаюсь на всё</label>
+        </div>
+
+        <!-- <input type="button" value=""> не используют из-за невозможности оформления -->
+        <button type="submit">Оставить заявку</button>
+      </form>
+    </div>
+
+    <!-- чтобы добавлять плейсхолдер когда фокус
+    <script>
+      document.querySelector('.form-input').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+      document.querySelector('.form-input').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script> -->
+  </body>
+</html>

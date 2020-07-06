@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/lesson12-3.css" />
+    <title>Стилизация форм - кастомные чекбоксы</title>
+  </head>
+
+  <body>
+    <header>
+      <ul class="main">
+        <li><a href="./">НА ГЛАВНУЮ</a></li>
+      </ul>
+    </header>
+    <div class="container">
+      <form class="form" autocomplete="off">
+        <label class="form-field"
+          ><input class="form-input" type="text" name="name" placeholder=" " autofocus />
+          <span class="form-label">Имя</span>
+          <span class="form-icon">
+            <svg class="icon">
+              <use href="./img/sprite.svg#user-name"></use>
+            </svg>
+          </span>
+        </label>
+
+        <label class="form-field"
+          ><input class="form-input" type="tel" name="tel" placeholder=" " autocomplete="on" /> <span class="form-label">Телефон</span>
+          <span class="form-icon">
+            <svg class="icon">
+              <use href="./img/sprite.svg#user-tel"></use>
+            </svg>
+          </span>
+        </label>
+
+        <label class="form-field"
+          ><input class="form-input" type="email" name="mail" placeholder=" " autocomplete="email" />
+          <span class="form-label">Почта</span>
+          <span class="form-icon">
+            <svg class="icon">
+              <use href="./img/sprite.svg#user-mail"></use>
+            </svg>
+          </span>
+        </label>
+
+        <!-- <div class="form-field">
+          <textarea class="comment form-input" name="comment" id="comment" cols="40" rows="10" placeholder=" "></textarea>
+          <label class="form-label" for="comment">Оставьте комментарий</label>
+        </div> -->
+
+        <!-- кастомный чекбокс через псевдоэлемент -->
+        <div class="psevdo">
+          <input class="checkbox visually-hidden" type="checkbox" name="policy" id="policy" />
+          <label class="checkbox-label" for="policy">Соглашаюсь на всё</label>
+        </div>
+
+        <!--  кастомный чекбокс через инлайн свг  -->
+        <div class="inline">
+          <label class="checkbox-label">
+            <input class="checkbox visually-hidden" type="checkbox" name="policy" />
+            <svg class="checkbox-icon">
+              <use href="./img/sprite.svg#checked"></use>
+            </svg>
+            Соглашаюсь на всё
+          </label>
+        </div>
+
+        <div class="css-bg">
+          <label class="checkbox-label">
+            <input class="checkbox visually-hidden" type="checkbox" name="policy" />
+            <span class="check-icon"> </span>
+            Соглашаюсь на всё
+          </label>
+        </div>
+
+        <!-- с анимацией текста -->
+        <div class="css-bg animation">
+          <label class="checkbox-label">
+            <input class="checkbox visually-hidden" type="checkbox" name="policy" />
+            <span class="check-icon"> </span>
+            <span class="label-text"> Соглашаюсь на всё</span>
+          </label>
+        </div>
+
+        <!-- <input type="button" value=""> не используют из-за невозможности оформления -->
+        <button type="submit">Оставить заявку</button>
+        <span class="close-form">
+          <svg class="icon-close">
+            <use href="./img/sprite.svg#close"></use>
+          </svg>
+        </span>
+      </form>
+    </div>
+
+    <!-- чтобы добавлять плейсхолдер когда фокус
+    <script>
+      document.querySelector('.form-input').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+      document.querySelector('.form-input').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script> -->
+  </body>
+</html>

@@ -1,0 +1,125 @@
+body {
+  padding: 30px;
+  line-height: 2.8;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+}
+
+.menu-item {
+  position: relative;
+  margin-right: 15px;
+  outline: 2px solid green;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 20px;
+
+  text-decoration: none;
+  background-color: rgb(169, 196, 169);
+  color: #fff;
+}
+
+textarea {
+  resize: none;
+}
+
+.form {
+  width: 600px;
+  outline: 1px solid green;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* если не через флекс родителю */
+/* .form-input{
+  width: 100%;
+} */
+
+.form-field label {
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 15px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* к ::placeholder применяются только свойства текста */
+.form-input::placeholder {
+  color: rgb(169, 218, 169);
+  text-align: right;
+}
+
+.group {
+  margin-bottom: 20px;
+}
+
+.group-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.topic-options,
+.experience-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-options li {
+  display: flex;
+  align-items: center;
+}
+
+.topic-options input[type='checkbox'] {
+  /* чебоксы плохо стилизируются и не во всех браузерах эти сьтили корректно отображаются, лучше скрывать и делать кастомный чекбокс
+   width: 40px;
+  height: 40px; */
+}
+
+.topic-options label {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.form .date {
+  /* border-color: red; */
+  border-width: 5px;
+  border-radius: 4px;
+  padding: 20px 40px;
+
+  /* font-size: 40px;
+  color: fuchsia;
+  background-color: pink; */
+}
+
+.form .comment {
+  padding: 10px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/lesson11.css" />
+    <title>Формы</title>
+  </head>
+
+  <body>
+    <header>
+      <ul class="main">
+        <li><a href="./">НА ГЛАВНУЮ</a></li>
+      </ul>
+    </header>
+    <div class="container">
+      <form class="form js-speaker-form" autocomplete="off">
+        <div class="form-field">
+          <label class="form-label" for="name">Имя</label>
+          <input class="form-input" type="text" name="name" id="name" placeholder="Петр Петрович" autofocus />
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="tel">Телефон</label>
+          <input class="form-input" type="tel" name="tel" id="tel" placeholder="+380**-000-00-00" autocomplete="on" />
+        </div>
+
+        <div class="form-field">
+          <label for="mail">Почта</label>
+          <input type="email" name="mail" id="mail" autocomplete="email" />
+        </div>
+
+        <div role="group" class="group">
+          <!-- если призыв к действию
+          <b>Выберите тему доклада</b> -->
+
+          <h2 class="group-title">Тема доклада</h2>
+
+          <ul class="topic-options">
+            <li>
+              <input type="checkbox" name="topic" id="html" value="html" checked />
+              <label for="html">HTML</label>
+            </li>
+            <li>
+              <input type="checkbox" name="topic" id="css" value="css" checked />
+              <label for="css">CSS</label>
+            </li>
+            <li>
+              <input type="checkbox" name="topic" id="js" value="js" />
+              <label for="js">JS</label>
+            </li>
+          </ul>
+        </div>
+
+        <br />
+        <div role="group" class="group">
+          <h2 class="group-title">уровень вашей экспертизы</h2>
+          <ul class="experience-options">
+            <li>
+              <input type="radio" name="experience" id="junior" value="junior" checked />
+              <label for="junior">Junior</label>
+            </li>
+            <li>
+              <input type="radio" name="experience" id="middle" value="middle" />
+              <label for="middle">Middle</label>
+            </li>
+            <li>
+              <input type="radio" name="experience" id="senior" value="senior" />
+              <label for="senior">Senior</label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- сложно стилизировать, и заменяют на готовые кастомные плагины -->
+        <!-- <input type="date" name="date" id="" />
+        <input type="time" name="time" id="" /> -->
+        <div class="form-field">
+          <label for="date-time">Дата доклада</label>
+          <input class="date" type="datetime-local" name="date-time" id="date-time" min="2020-04-12T12:30" />
+        </div>
+
+        <div class="form-field">
+          <label for="pdf">Загрузите копию доклада в pdf</label>
+          <input type="file" name="pdf" id="pdf" />
+        </div>
+
+        <div class="form-field">
+          <label for="comment">Оставте комментарий</label>
+          <textarea class="comment" name="comment" id="comment" cols="40" rows="10" placeholder="Напишите комментарий"></textarea>
+        </div>
+
+        <div>
+          <input type="checkbox" name="policy" id="policy" />
+          <label for="policy">Соглашаюсь на всё</label>
+        </div>
+
+        <!-- <input type="button" value=""> не используют из-за невозможности оформления -->
+        <button type="submit">Оставить заявку</button>
+      </form>
+
+      <!-- 
+      <form class="js-speaker-form">
+        <label for="name">Имя
+          <input type="text" name="name" id="name" />
+        </label>
+      </form> -->
+    </div>
+
+    <script>
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+
+          e.currentTarget.reset();
+        });
+      })();
+    </script>
+  </body>
+</html>
