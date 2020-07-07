@@ -195,6 +195,14 @@ p {
   border-radius: 2px;
 }
 
+.css-bg .checkbox:focus + .check-icon {
+  border: 2px solid blue;
+}
+
+.css-bg .checkbox:checked:focus + .check-icon {
+  border: 2px solid green;
+}
+
 /* с анимацией чекбокса и текста лейбл */
 
 .label-text {
@@ -213,6 +221,40 @@ p {
 
 .animation .checkbox:checked + .check-icon {
   transform: scale(1.5);
+}
+
+/* метод Макеева */
+.makeev .check-label {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 19px;
+}
+
+.icon-check {
+  position: absolute;
+  width: 12px;
+  height: 11px;
+  margin-left: -17px;
+
+  box-shadow: 0 0 0 2px #212121;
+  border-radius: 0.1px;
+}
+
+.makeev .checkbox:focus + .icon-check {
+  box-shadow: 0 0 0 2px #212121, 0 0 0 3px green;
+}
+
+.makeev .checkbox:checked:focus + .icon-check {
+  background-color: tomato;
+  background-image: url(../img/check.svg);
+  background-position: center;
+}
+
+.makeev .checkbox:checked + .icon-check {
+  background-color: tomato;
+  background-image: url(../img/check.svg);
+  background-position: center;
+  box-shadow: 0 0 0 2px tomato;
 }
 
 /* вместо appearance: none; потому что это свойство пока неработает во всех браузерах */
